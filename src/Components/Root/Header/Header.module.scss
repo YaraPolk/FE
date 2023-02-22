@@ -4,13 +4,14 @@ header {
   justify-content: space-between;
   background-color: #1e1e1e;
   padding: 20px 0;
-  position: sticky;
-  top: 0;
+  position: absolute;
   transition: .5s;
 
   &.scroll {
     background-color: #353c42;
     padding: 10px 0;
+    position: sticky;
+    top: 0;
     transition: .5s;
   }
 }

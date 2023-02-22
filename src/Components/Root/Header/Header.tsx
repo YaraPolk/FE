@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import './Header.scss';
+import style from './Header.module.scss';
 
 const token: boolean = false;
 
@@ -24,9 +24,7 @@ class Header extends React.Component<any, any> {
 
     render() {
         return (
-            <header
-                className={this.props.checkScrollTop > 0 ? "scroll" : ""}
-            >
+            <header className={this.props.checkScrollTop > 0 ? style.scroll : ""}>
                 <div className="App-logo">
                     <Link to={"/"}>
                         <svg className="icon-logo-svg" width="194" height="29" viewBox="0 0 194 29" fill="none">
