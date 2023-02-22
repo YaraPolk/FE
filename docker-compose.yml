@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  frontend:
+    build: ./
+    container_name: test_task_frontend
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./:/app
+      - ./node_modules
+    stdin_open: true
+    tty: true

@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './assets/scss/App.scss';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import WelcomePage from "./page/WelcomePage/WelcomePage";
+import MainPage from "./page/MainPage/MainPage";
+import Header from "./Components/Root/Header/Header";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component<any, {checkScroll: number}> {
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            checkScroll: 0
+        }
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', ()=>this.setState({checkScroll: window.scrollY}));
+    }
+
+    render() {
+        return (
+            <BrowserRouter>
+                <Header checkScrollTop={this.state.checkScroll}/>
+                <section className="App">
+                    <Routes>
+                        <Route path={'/'} element={<WelcomePage/>}/>
+                        <Route path={'/main_page'} element={<MainPage/>}/>
+                    </Routes>
+                </section>
+            </BrowserRouter>
+        );
+    }
 }
 
 export default App;
