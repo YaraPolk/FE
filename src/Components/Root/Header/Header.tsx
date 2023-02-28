@@ -2,12 +2,18 @@ import React from "react";
 import {Link} from "react-router-dom";
 import style from './Header.module.scss';
 
-const token: boolean = false;
-const pageUrl: string = window.location.pathname;
+const token: boolean = true;
 
-class Header extends React.Component<any, any> {
+class Header extends React.Component<any, {pageUrl: string}> {
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            pageUrl: window.location.pathname,
+        }
+    }
+
     withOutToken = () => {
-        if (pageUrl !== "/" && pageUrl !== "/sing_in" && pageUrl !== "/sing_up"){
+        if (this.state.pageUrl !== "/" && this.state.pageUrl !== "/sing_in" && this.state.pageUrl !== "/sing_up"){
             window.location.href = "/";
         }
         return (
@@ -19,16 +25,19 @@ class Header extends React.Component<any, any> {
     }
 
     withToken = () => {
-        if (pageUrl === "/") {
+        this.setState({pageUrl: window.location.pathname});
+
+        if (this.state.pageUrl === "/") {
             return (
-                <a href={"/main_page"}>Go to main page</a>
+                // <a href={"/main_page"}>Go to main page</a>
+                <Link to={"/main_page"}>Go to main page</Link>
             );
         } else {
             return (
                 <>
-                    <Link to={"/create_new_board"} id={"new_board"}>Create new board</Link>
-                    <Link to={'/edit_profile'} id={"edit_profile"}>Edit Profile</Link>
-                    <Link to={"/sing_out"} id={"sing_out"}>Sing Out</Link>
+                    <Link to={"/create_new_board"} id={style.new_board}>Create new board</Link>
+                    <Link to={'/edit_profile'} id={style.edit_profile}>Edit Profile</Link>
+                    <Link to={"/sing_out"} id={style.sing_out}>Sing Out</Link>
                 </>
             );
         }
