@@ -1,10 +1,15 @@
 import React from "react";
+import style from "./MainPage.module.scss";
 
 class MainPage extends React.Component{
     render() {
         return (
-            <section className={'home-page'}>
-                <h1>This will be your Board List</h1>
+            <section className={style.homePage}>
+                <h1>Welcome to your Board List</h1>
+                <div className="boardList">
+                    <ul>
+                    </ul>
+                </div>
             </section>
         );
     }
