@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import WelcomePage from "./page/WelcomePage/WelcomePage";
 import MainPage from "./page/MainPage/MainPage";
 import Header from "./Components/Root/Header/Header";
+import UserDashboard from "./page/UserDashboard/UserDashboard";
 
 class App extends React.Component<any, {checkScroll: number}> {
     constructor(props: any) {
@@ -25,6 +26,7 @@ class App extends React.Component<any, {checkScroll: number}> {
                     <Routes>
                         <Route path={'/'} element={<WelcomePage/>}/>
                         <Route path={'/main_page'} element={<MainPage/>}/>
+                        <Route path={"/edit_profile"} element={<UserDashboard/>}/>
                     </Routes>
                 </section>
             </BrowserRouter>

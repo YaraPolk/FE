@@ -1,0 +1,84 @@
+.dashboard {
+  background-color: #1e1e1e;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
+  flex-wrap: wrap;
+
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    h2,h3 {
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    &.dashboard_edit_form {
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+
+        label {
+          width: 90%;
+          padding: 0 10px;
+          text-align: left;
+          font-size: 22px;
+        }
+
+        input, button {
+          background-color: #1e1e1e;
+          width: 90%;
+          color: #ffffff;
+          font-size: 16px;
+          text-decoration: none;
+          border: 2px solid #fff;
+          border-radius: 10px;
+          font-weight: 700;
+          padding: 1.5em 1em;
+          margin: 3% 0 5% 0;
+          transition: .5s;
+        }
+
+        button {
+          cursor: pointer;
+          width: 100%;
+          background-color: #ffffff;
+          color: #1e1e1e;
+        }
+      }
+    }
+
+    &.dashboard_delete_user {
+      button {
+        background-color: #1e1e1e;
+        width: 15%;
+        color: #ffffff;
+        font-size: 16px;
+        text-decoration: none;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        font-weight: 700;
+        padding: 1.5em 1em;
+        transition: .5s;
+        cursor: pointer;
+
+        &:hover {
+          transition: .5s;
+          border: 2px solid red;
+          background-color: red;
+        }
+      }
+    }
+  }
+}
