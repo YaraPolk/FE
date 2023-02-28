@@ -34,6 +34,16 @@ nav {
     margin: 0 1%;
     transition: .5s;
 
+    &#new_board {
+      background-color: #334353;
+      border: 2px solid #334353;
+
+      &:hover {
+        background-color: #fff;
+        transition: .5s;
+      }
+    }
+
     &:hover {
       background-color: #fff;
       color: #353c42;
