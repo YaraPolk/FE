@@ -29,7 +29,6 @@ class Header extends React.Component<any, {pageUrl: string}> {
 
         if (this.state.pageUrl === "/") {
             return (
-                // <a href={"/main_page"}>Go to main page</a>
                 <Link to={"/main_page"}>Go to main page</Link>
             );
         } else {

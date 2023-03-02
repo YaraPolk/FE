@@ -1,4 +1,57 @@
 .homePage {
-  margin-top: 5%;
+  background-color: #1e1e1e;
+  width: 100%;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+
+  .homePage__search {
+    width: 100%;
+
+    input {
+      background-color: #1e1e1e;
+      width: 20%;
+      color: #ffffff;
+      font-size: 16px;
+      text-decoration: none;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      font-weight: 700;
+      padding: 1.5em 1em;
+      transition: .5s;
+    }
+  }
+
+  .boardList {
+    width: 90%;
+    max-height: 60vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #282828;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: grey;
+      border-radius: 10px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
 }
