@@ -5,6 +5,8 @@ import WelcomePage from "./page/WelcomePage/WelcomePage";
 import MainPage from "./page/MainPage/MainPage";
 import Header from "./Components/Root/Header/Header";
 import UserDashboard from "./page/UserDashboard/UserDashboard";
+import SingIn from "./page/Sing_in/SingIn";
+import SingUp from "./page/SIng_up/SingUp";
 
 class App extends React.Component<any, {checkScroll: number}> {
     constructor(props: any) {
@@ -27,6 +29,8 @@ class App extends React.Component<any, {checkScroll: number}> {
                         <Route path={'/'} element={<WelcomePage/>}/>
                         <Route path={'/main_page'} element={<MainPage/>}/>
                         <Route path={"/edit_profile"} element={<UserDashboard/>}/>
+                        <Route path={"/sing_in"} element={<SingIn/>}/>
+                        <Route path={"/sing_up"} element={<SingUp/>}/>
                     </Routes>
                 </section>
             </BrowserRouter>

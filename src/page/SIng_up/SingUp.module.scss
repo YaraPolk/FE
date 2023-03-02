@@ -1,0 +1,95 @@
+.sing_up {
+  background-color: #1e1e1e;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    h3 {
+      width: 100%;
+      text-align: center;
+      margin: .5em 0 2em 0;
+    }
+
+    &.sing_up__form {
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+
+        label {
+          width: 90%;
+          padding: 0 10px;
+          text-align: left;
+          font-size: 22px;
+        }
+
+        input, button {
+          background-color: #1e1e1e;
+          width: 90%;
+          color: #ffffff;
+          font-size: 16px;
+          text-decoration: none;
+          border: 2px solid #fff;
+          border-radius: 10px;
+          font-weight: 700;
+          padding: 1.5em 1em;
+          margin: 3% 0 5% 0;
+          transition: .5s;
+        }
+
+        button {
+          cursor: pointer;
+          width: 100%;
+          background-color: #ffffff;
+          color: #1e1e1e;
+        }
+      }
+    }
+
+    &.sing_up__sing_in_link {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h6 {
+        margin: 1% 0;
+      }
+
+      a {
+        background-color: #1e1e1e;
+        width: 5%;
+        color: #ffffff;
+        font-size: 16px;
+        text-decoration: none;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        font-weight: 700;
+        padding: 1.5em .5em;
+        transition: .5s;
+        cursor: pointer;
+
+        &:hover {
+          transition: .5s;
+          color: #1e1e1e;
+          border: 2px solid #fff;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
